@@ -27,7 +27,6 @@
 
 .toggle{
     margin-top: 40px;
-    margin-left: 5%;
     display: flex;
     gap: 10px;
 }
@@ -114,4 +113,23 @@
     color: var(--Light-blue100);
     border-color: var(--Light-blue100);
     transition: .4s;
+}
+
+.response-box-dark{
+    background-color: #1e2124;
+    transition: .4s;
+}
+
+.msg-box-dark{
+    color: var(--Light-blue100);
+    transition: .4s;
+}
+
+.footer-dark{
+    background-color: #1e2124;
+    transition: .4s;
+}
+
+.icon-alura-mobile{
+    fill: var(--Light-blue100);
 }

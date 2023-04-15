@@ -101,6 +101,15 @@
         gap: 10px;
     }
 
+    .header{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .toggle{
+        margin-right: 80px;
+    }
+
 }
 
 @media screen and (max-width : 425px){
@@ -109,8 +118,7 @@
     }
 
     .icon-alura-mobile{
-        display: flex;
-        padding: 15px;
+        visibility: visible;
     }
 
     .interaction{
@@ -141,6 +149,16 @@
 
     .msg-box{
         padding: 15px;
+    }
+
+    .header{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .toggle{
+        margin-bottom: 5%;
+        margin-right: 0px;
     }
 }
 
