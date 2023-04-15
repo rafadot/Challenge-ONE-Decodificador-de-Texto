@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root{
+    --White : #ffff;
+
+    /* Dark blue */
+    --Dark-blue100 : #609ED4;
+    --Dark-blue200 : #356EA9;
+    --Dark-blue300 : #0A3871;
+    --Dark-blue400 : #072B61;
+    --Dark-blue500 : #052051;
+
+    /* Light blue */
+    --Light-blue100 : #F3F5FC;
+    --Light-blue200 : #EFF1FA;
+    --Light-blue300 : #E9ECF8;
+    --Light-blue400 : #AAB2D5;
+    --Light-blue500 : #757FB2;
+
+    /* Gray */
+    --Gray100 : #CED4DA;
+    --Gray200 : #ADB5BD;
+    --Gray300 : #868E96;
+    --Gray400 : #495057;
+    --Gray500 : #343A40;
+}
+
+.toggle{
+    margin-top: 40px;
+    margin-left: 5%;
+    display: flex;
+    gap: 10px;
+}
+
+.checkbox{
+    appearance: none;
+    width: 80px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: inset 0px 0px 16px 1px rgba(0,0,0,0.24);
+    cursor: pointer;   
+    transition: .4s;
+    position: relative;
+}
+
+.checkbox:checked{
+    background-color: var(--Dark-blue100);
+}
+
+.checkbox:before{
+    content: '';
+    width: 40px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50px;
+    position: absolute;
+    box-shadow: 0px 4px 8px 1px rgba(0,0,0,0.23);
+    transform: scale(1.1);
+    top: 0px;
+    left: 0px;
+    transition: .4s;
+}
+
+.checkbox:checked:before{
+    left: 40px;
+}
+
+.body-dark{
+    background-color: var(--Gray500);
+    transition: .4s;
+}
+
+.moon-dark{
+    visibility: hidden;
+    transition: .4s;
+}
+
+.sun-dark{
+    visibility: hidden;
+}
+
+.icon-alura-dark{
+    fill : var(--Light-blue100);
+    transition: .4s;
+}
+
+.text-input-dark{
+    background-color: var(--Gray500);
+    color: var(--Light-blue100);
+    transition: .4s;
+}
+.text-input-dark::placeholder{
+    color: var(--Light-blue100);
+}
+
+.alert-image-dark{
+    fill: var(--Light-blue100);
+    transition: .4s;
+}
+
+.span-alert-dark{
+    color: var(--Light-blue100);
+    transition: .4s;
+}
+
+.btn-criptografar-dark{
+    background-color: var(--Light-blue100);
+    color: var(--Gray500);
+    transition: .4s;
+}
+
+.btn-descriptografar-dark{
+    color: var(--Light-blue100);
+    border-color: var(--Light-blue100);
+    transition: .4s;
+}
