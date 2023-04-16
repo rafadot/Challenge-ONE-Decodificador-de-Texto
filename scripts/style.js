@@ -1,21 +1,24 @@
-const sun = document.getElementById("sun");
-const moon = document.getElementById("moon");
-const checkbox = document.getElementById("checkbox-dark");
-const body = document.querySelector("body");
-const iconAlura = document.getElementById("icon-alura");
-const textInput = document.getElementById("text-input");
-const alertImage = document.getElementById("alert-image") 
-const spanAlert = document.getElementById("span-alert")
-const btnCrip = document.getElementById("btn-criptografar")
-const btnDcript = document.getElementById("btn-descriptografar")
-const responseBox = document.getElementById("response-box")
-const imageResponseBox = document.getElementById("image-response-box")
-const p1 = document.getElementById("p1")
-const p2 = document.getElementById("p2")
-const footer = document.getElementById("footer")
-const whatsapp = document.getElementById("whatsapp")
-const github = document.getElementById("github")
-const iconAluraMobile = document.getElementById("icon-alura-mobile")
+let sun = document.getElementById("sun");
+let moon = document.getElementById("moon");
+let checkbox = document.getElementById("checkbox-dark");
+let body = document.querySelector("body");
+let iconAlura = document.getElementById("icon-alura");
+let textInput = document.getElementById("text-input");
+let alertImage = document.getElementById("alert-image") 
+let spanAlert = document.getElementById("span-alert")
+let btnCrip = document.getElementById("btn-criptografar")
+let btnDcript = document.getElementById("btn-descriptografar")
+let responseBox = document.getElementById("response-box")
+let imageResponseBox = document.getElementById("image-response-box")
+let p1 = document.getElementById("p1")
+let p2 = document.getElementById("p2")
+let footer = document.getElementById("footer")
+let whatsapp = document.getElementById("whatsapp")
+let github = document.getElementById("github")
+let iconAluraMobile = document.getElementById("alura-icon-mobile")
+let footerIcon = document.getElementById("footer-icon-alura")
+let btnCopy = document.getElementById("btn-copy")
+let outResponse = document.getElementById("out-response")
 
 checkbox.checked = true;
 switchDarkMode();
@@ -28,6 +31,19 @@ checkbox.addEventListener("click",function(){
 function alterClickColorBtn(){
 
   if(!checkbox.checked){
+    btnCopy.onmouseenter = function(){
+      btnCopy.style.backgroundColor = "#F3F5FC";
+    }
+    btnCopy.onmouseleave = function(){
+      btnCopy.style.backgroundColor = "#ffff";
+    }
+    btnCopy.onmousedown = function(){
+      btnCopy.style.backgroundColor = "#E9ECF8";
+    }
+    btnCopy.onmouseup = function(){
+      btnCopy.style.backgroundColor = "#F3F5FC";
+    }
+
     //alter color on click
     btnCrip.onmousedown = function() {
       btnCrip.style.backgroundColor = "#041c21"
@@ -56,6 +72,19 @@ function alterClickColorBtn(){
       btnDcript.style.backgroundColor = "#F3F5FC";
     }
   }else{
+    btnCopy.onmouseenter = function(){
+      btnCopy.style.backgroundColor = "#343A40"
+    }
+    btnCopy.onmouseleave = function(){
+      btnCopy.style.backgroundColor = "#1e2124"
+    }
+    btnCopy.onmousedown = function(){
+      btnCopy.style.backgroundColor = "#495057"
+    }
+    btnCopy.onmouseup = function(){
+      btnCopy.style.backgroundColor = "#343A40"
+    }
+
     //alter color on click
     btnCrip.onmousedown = function() {
       btnCrip.style.backgroundColor = "#495057"
@@ -108,6 +137,13 @@ function switchDarkMode(){
     whatsapp.setAttribute("src","images/whatsapp-dark.svg")
     github.setAttribute("src","images/github-dark.svg")
     iconAluraMobile.classList.add("icon-alura-mobile")
+    footerIcon.setAttribute("fill","#ffffff")
+    btnCopy.style.backgroundColor = "#1e2124"
+    btnCopy.style.color = "#f3f5e4"
+    btnCopy.style.borderColor = "#f3f5e4"
+    outResponse.style.backgroundColor = "#1e2124"
+    outResponse.style.color = "#edeff1"
+    outResponse.style.transition = ".4s"
   }else{
     body.classList.remove("body-dark")
     moon.classList.add("moon-dark")
@@ -129,5 +165,12 @@ function switchDarkMode(){
     whatsapp.setAttribute("src","images/whatsapp@512px.svg")
     github.setAttribute("src","images/github@512px.svg")
     iconAluraMobile.classList.remove("icon-alura-mobile")
+    btnCopy.classList.remove("btn-copy-dark")
+    btnCopy.style.backgroundColor = "#ffff"
+    btnCopy.style.color = "#0A3871"
+    btnCopy.style.borderColor = "#0A3871"
+    outResponse.style.backgroundColor = "#ffffff"
+    outResponse.style.color = "#495057"
+    outResponse.style.transition = ".0s"
   }
 }

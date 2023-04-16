@@ -18,7 +18,7 @@
     --Light-blue500 : #757FB2;
 
     /* Gray */
-    --Gray100 : #CED4DA;
+    --Gray100 : #ecedee;
     --Gray200 : #ADB5BD;
     --Gray300 : #868E96;
     --Gray400 : #495057;
@@ -132,4 +132,8 @@
 
 .icon-alura-mobile{
     fill: var(--Light-blue100);
+}
+
+.btn-copy-dark{
+    background-color: #1e2124;
 }

@@ -42,7 +42,7 @@ body{
     align-items: center;
 }
 
-.icon-alura-mobile{
+.alura-icon-mobile{
     visibility: hidden;
     display: flex;
     margin: 15px;
