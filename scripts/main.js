@@ -9,6 +9,14 @@ let btnCopy = document.getElementById("btn-copy")
 
 btnCrip.addEventListener("click",function(){
     if(!verifyNullInput(textInput.value)){
+        if(!new RegExp("^[a-zA-Z]+$").test(textInput.value)){
+            contentBox.setAttribute("hidden",true)
+            responseBox.classList.add("response-box-out")
+            outBobx.hidden = false;
+            outResponse.value = "Não devem ser utilizados letras com acentos nem caracteres especiais."
+            return null;
+        }
+
         contentBox.setAttribute("hidden",true)
         responseBox.classList.add("response-box-out")
         outBobx.hidden = false;
@@ -21,6 +29,13 @@ btnCrip.addEventListener("click",function(){
 })
 btnDcrip.addEventListener("click",function(){
     if(!verifyNullInput(textInput.value)){
+        if(!new RegExp("^[a-zA-Z]+$").test(textInput.value)){
+            contentBox.setAttribute("hidden",true)
+            outBobx.hidden = false;
+            outResponse.value = "Não devem ser utilizados letras com acentos nem caracteres especiais."
+            return null;
+        }
+
         contentBox.setAttribute("hidden",true)
         outBobx.hidden = false;
         let output = printDcript(textInput.value)
